@@ -5,7 +5,7 @@ const stores = {
   userStore,
 }
 
-export default function withMobx(WrappedComponent: React.ComponentType) {
+export default function withStores(WrappedComponent: React.ComponentType) {
   return class extends React.Component {
     render() {
       return (

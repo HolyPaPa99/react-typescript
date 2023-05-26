@@ -2,10 +2,10 @@ import React from "react";
 import { RouterProvider } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import routes from "@Views/Routes";
-import withMobx from "@ViewModels/index";
+import withStores from "./ViewModels";
 import withIntl from "@Common/Intl";
 
-@withMobx
+@withStores
 @withIntl
 class App extends React.PureComponent {
     render() {

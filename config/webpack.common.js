@@ -38,15 +38,30 @@ module.exports = {
                 },
             },
             {
-                // 增加对 SCSS 文件的支持
-                test: /\.scss$/,
-                // SCSS 文件的处理顺序为先 sass-loader 再 css-loader 再 style-loader
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                test: /\.module.scss$/i,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                mode: "local",
+                            },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
+                ],
             },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
                 enforce: "pre",
                 test: /\.js$/,
+                exclude: /node_modules/,
                 loader: "source-map-loader"
             }
         ]

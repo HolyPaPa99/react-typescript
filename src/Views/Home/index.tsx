@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router';
 import { Link } from 'react-router-dom';
-import NavSideBar from '@src/Components/Navigation/NavSideBar';
+import styles from './index.module.scss';
 
 class Home extends React.Component {
 
@@ -11,19 +11,17 @@ class Home extends React.Component {
                 <div style={{ marginRight: '20px' }}>
                     <h1>Hello, World!</h1>
                     <hr />
-                    <ul >
-                        <li style={{listStyle: 'none'}}>
+                    <ul className={styles.ul}>
+                        <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li style={{listStyle: 'none'}}>
+                        <li>
                             <Link to="page1/1/2">Page1</Link>
                         </li>
-                        <li style={{listStyle: 'none'}}>
+                        <li>
                             <Link to="page2">Page2</Link>
                         </li>
                     </ul>
-                    <hr />
-                    <NavSideBar />
                 </div>
                 <Outlet />
             </div>
