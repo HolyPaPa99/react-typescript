@@ -6,6 +6,35 @@
 			"dom.iterable",
 			"esnext"
 		],
+		"paths": {
+			"@src/*": [
+				"./src/*"
+			],
+			"@Apis/*": [
+				"./src/Apis/*"
+			],
+			"@Common/*": [
+				"./src/Common/*"
+			],
+			"@Components/*": [
+				"./src/Components/*"
+			],
+			"@Configurations/*": [
+				"./src/Configurations/*"
+			],
+			"@Models/*": [
+				"./src/Models/*"
+			],
+			"@Styles/*": [
+				"./src/Styles/*"
+			],
+			"@ViewModels/*": [
+				"./src/ViewModels/*"
+			],
+			"@Views/*": [
+				"./src/Views/*"
+			],
+		},
 		"allowJs": true,
 		"skipLibCheck": true,
 		"esModuleInterop": true,
@@ -18,9 +47,11 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"useDefineForClassFields": true,
+		"experimentalDecorators": true,
 		"jsx": "react-jsx"
 	},
 	"include": [
 		"src"
-	]
+	],
 }

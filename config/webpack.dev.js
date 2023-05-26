@@ -8,7 +8,20 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {//dev server 默认端口8080
-        contentBase: path.resolve(__dirname, '../dist')
+        static: [
+            {
+                directory: path.join(__dirname, '../public'),
+                // publicPath: '/assets'
+            }
+        ],
+        compress: true,
+        port: 9000,
+        open: false,
+        client: {
+            logging: 'log',
+            overlay: true,
+            progress: true,
+        },
     },
     optimization: {
         runtimeChunk: 'single',

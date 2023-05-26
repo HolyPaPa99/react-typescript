@@ -1,25 +1,16 @@
-import React from 'react';
+import React from "react";
+import { RouterProvider } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
+import routes from "@Views/Routes";
+import withMobx from "@ViewModels/index";
+import withIntl from "@Common/Intl";
 
-const user = {
-    name: 'Hedy Lamarr',
-    imageUrl: 'https://img.liangzipic.com/upload/vod/20230511-1/c3fb548ca10a575386e167342a02d973.jpg',
-    imageSize: 190
-};
-
-export default function App() {
-    return (
-        <>
-            <h1>{user.name}</h1>
-            <img
-                className="avatar"
-                src={user.imageUrl}
-                alt={'Photo of ' + user.name}
-                style={{
-                    width: 'auto',
-                    height: 'auto',
-                    borderRadius: '20px'
-                }}
-            />
-        </>
-    );
+@withMobx
+@withIntl
+class App extends React.PureComponent {
+    render() {
+        return (<RouterProvider router={createBrowserRouter(routes)} />)
+    }
 }
+
+export default App;
