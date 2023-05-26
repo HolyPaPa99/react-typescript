@@ -1,5 +1,5 @@
-import Language from "@Models/User/Language";
-import { action, observable } from "mobx";
+import Language from '@Models/User/Language';
+import { action, observable } from 'mobx';
 
 class UserStore {
 
@@ -7,7 +7,7 @@ class UserStore {
 
     @action
     setLang(lang: Language){
-        this.lang = lang
+        this.lang = lang;
     }
 
     

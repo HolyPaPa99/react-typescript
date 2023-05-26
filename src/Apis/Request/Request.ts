@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 /**
  * 创建一个定制的axios实例
@@ -7,7 +7,7 @@ import axios from "axios";
 function createRequest() {
     const axiosInstance = axios.create({
 
-    })
+    });
     // 添加请求拦截器
     axiosInstance.interceptors.request.use(function (config) {
         // 在发送请求之前做些什么

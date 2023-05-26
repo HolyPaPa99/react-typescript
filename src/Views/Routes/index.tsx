@@ -1,7 +1,8 @@
-import { createRoutesFromElements, Route, RouteObject } from "react-router";
+import { createRoutesFromElements, Route, RouteObject } from 'react-router';
+import React from 'react';
 import Home from '@Views/Home';
-import Page1 from "@Views/Page1";
-import Page2 from "@Views/Page2";
+import Page1 from '@Views/Page1';
+import Page2 from '@Views/Page2';
 
 const routes: RouteObject[] = createRoutesFromElements(
     <Route path="/" element={<Home />}>

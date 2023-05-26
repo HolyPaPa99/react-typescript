@@ -1,6 +1,6 @@
 enum Language {
-    English = "en-US",
-    Chinese = "zh-CN",
-};
+    English = 'en-US',
+    Chinese = 'zh-CN',
+}
 
 export default Language;
