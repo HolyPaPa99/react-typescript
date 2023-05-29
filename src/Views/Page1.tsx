@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 function Page1() {
     const params = useParams();
-    const { userStore } = useStores()
+    const { userStore } = useStores();
     return (
         <div>
             <h1>page1</h1>
@@ -17,4 +17,4 @@ function Page1() {
     );
 }
 
-export default observer(Page1)
+export default observer(Page1);

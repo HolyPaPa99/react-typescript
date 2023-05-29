@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import renderer from 'react-test-renderer'
-import Home from '.'
+import renderer from 'react-test-renderer';
+import Home from '.';
 
 it('Home', () => {
     const component = renderer.create(
@@ -9,6 +9,6 @@ it('Home', () => {
             <Home />
         </BrowserRouter>
         ,);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });

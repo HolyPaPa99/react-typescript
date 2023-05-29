@@ -11,6 +11,6 @@ class App extends React.PureComponent {
     render() {
         return (<RouterProvider router={createBrowserRouter(routes)} />);
     }
-};
+}
 
 export default App;

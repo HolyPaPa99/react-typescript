@@ -6,7 +6,7 @@ const stores = {
 };
 
 export function useStores() {
-    return React.useContext(MobXProviderContext)
+    return React.useContext(MobXProviderContext);
 }
 
 export default function withStores(WrappedComponent: React.ComponentType) {
