@@ -22,7 +22,7 @@ export default function withIntl(WrappedComponent: React.ComponentType) {
                             <IntlProvider
                                 locale={this.props.userStore.lang}
                                 defaultLocale={Language.English}
-                                messages={message[this.props.userStore.lang.string]}>
+                                messages={message[this.props.userStore.lang]}>
                                 <WrappedComponent />
                             </IntlProvider>
                         );
